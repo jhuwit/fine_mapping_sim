@@ -97,9 +97,9 @@ The rest of the steps generate all of the results included in the
 manuscript; again, some of the models may not converge or make sense due
 to the nature of the dataset.
 
-# data 
+# data
 
-### raw 
+### raw
 
 Simulated data from `00_generate_data`
 
