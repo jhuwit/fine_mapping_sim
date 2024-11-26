@@ -31,7 +31,7 @@ Output:
 
 ## Interpolation Details
 
-```         
+  
 -   Linearly interpolate periods of missingness $\leq 15$ minutes for both MAP and CVP
 
     -   Interpolation start: average of 3 minutes prior to missingness
@@ -39,7 +39,7 @@ Output:
     -   Interpolation end: average of 3 minutes after missingness
 
     -   Only interpolate if period of missingness is less than or equal to 15 minutes, otherwise leave values as `NA`
-```
+
 
 `03_apply_exclusion_criteria.R`: exclude subjects based on missingness
 and exclusion criteria 
@@ -59,7 +59,6 @@ Outputs:
 
 -   `01_generate_cabg_manuscript_results_as_df.R`
 
-    ```         
     -   Saves regression results to `results/data_cabg_manuscript` for univariate and adjusted regressions for MAP (`map_regressions.rds`), CVP (`cvp_regressions.rds`), MAP+CVP (`bricks_regressions.rds`) predictors and 48h and composite AKI outcomes. Column names:
 
         -   `term`: hemodynamic range
@@ -89,7 +88,6 @@ Outputs:
         -   `lb_cma`: lower bound of 95% correlation and multiplicity adjusted (CMA) CI
 
         -   `ub_cma`: upper bound of 95% CMA CI
-    ```
 
     Note: some models may not converge given the simulated nature of the
     dataset.
