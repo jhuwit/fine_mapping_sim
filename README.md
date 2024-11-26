@@ -10,19 +10,24 @@ results.
 # code
 
 `00_generate_data.R` will simulate data in the same structure as the
-hemodynamics data we would have received from `n` patients. Outputs: -
-`data/raw/hemodynamics/individual_timeseries/*.csv` -
-`data/raw/covariates.csv` - `data/raw/event_start_stop_times.csv`
+hemodynamics data we would have received from `n` patients. 
+Outputs: 
+- `data/raw/hemodynamics/individual_timeseries/*.csv` 
+- `data/raw/covariates.csv` - `data/raw/event_start_stop_times.csv`
 
-`01_process_ts.R` processes individual time series data Inputs: -
-`data/raw/hemodynamics/individual_timeseries/*.csv` -
-`data/raw/event_start_stop_times.csv` Outputs: -
-`data/processed/hemo_timeseries_all.rds` -
-`data/processed/hemo_timeseries_cohort.rds`
+`01_process_ts.R` processes individual time series data 
+Inputs: 
+- `data/raw/hemodynamics/individual_timeseries/*.csv` -
+- `data/raw/event_start_stop_times.csv` 
+Outputs: 
+- `data/processed/hemo_timeseries_all.rds` 
+- `data/processed/hemo_timeseries_cohort.rds`
 
-`02_interpolate.R` interpolate missing time series data Input: -
-`data/processed/hemo_timeseries_cohort.rds` Output: -
-`data/processed/hemo_timeseries_interp_cohort.rds`
+`02_interpolate.R` interpolate missing time series data 
+Input: 
+- `data/processed/hemo_timeseries_cohort.rds` 
+Output: 
+- `data/processed/hemo_timeseries_interp_cohort.rds`
 
 ## Interpolation Details
 
@@ -37,12 +42,14 @@ hemodynamics data we would have received from `n` patients. Outputs: -
 ```
 
 `03_apply_exclusion_criteria.R`: exclude subjects based on missingness
-and exclusion criteria Inputs: -
-`data/processed/hemo_timeseries_interp_cohort.rds` -
-`data/raw/covariates.csv` - `data/raw/event_start_stop_times.csv`
-Outputs: - `data/analytic/hemo_timeseries_interp_post_exclusion.rds` -
-`data/analytic/covariates_post_exclusion.csv` -
-`data/analytic/exclusion_summary_cohort.csv`
+and exclusion criteria 
+Inputs: 
+- `data/processed/hemo_timeseries_interp_cohort.rds` 
+- `data/raw/covariates.csv` - `data/raw/event_start_stop_times.csv`
+Outputs: 
+- `data/analytic/hemo_timeseries_interp_post_exclusion.rds` 
+- `data/analytic/covariates_post_exclusion.csv` 
+- `data/analytic/exclusion_summary_cohort.csv`
 
 ## analysis
 
